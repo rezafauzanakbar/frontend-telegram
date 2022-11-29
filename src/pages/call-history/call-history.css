@@ -1,0 +1,21 @@
+.container-custom-call{
+    height: 1000px;
+}
+
+.side-left-call{
+    background: #ffffff;
+    height: 1000px;
+    padding: 40px;
+}
+
+.side-right-call{
+    background: #fafafa;
+    height: 1000px;
+}
+
+.image-user-chat{
+    border-radius: 20px;
+    border: none;
+    width: 70px;
+    height: auto;
+}
