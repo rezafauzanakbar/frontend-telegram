@@ -31,30 +31,30 @@ This app was built with some technologies below:
   <summary>
     Login & Register
   </summary>
-<img src="/screenshoots/login.png" alt="Login Page" />
-<img src="/screenshoots/register.png" alt="Register Page" />
+<img src="./screenshoots/Login.PNG" alt="Login Page" />
+<img src="./screenshoots/Register.png" alt="Register Page" />
 </details>
 
 <details>
   <summary>
     Chat Page
   </summary>
-<img src="/screenshoots/chat.png" alt="chat" />
-<img src="/screenshoots/chatmenu.png" alt="chatmenu" />
+<img src="./screenshoots/page chat.png" alt="chat" />
+<img src="./screenshoots/page menu chat.png" alt="chatmenu" />
 </details>
 
 <details>
   <summary>
    Profile Page
   </summary>
-<img src="/screenshoots/profilepage.png" alt="profile" />
+<img src="./screenshoots/page profile.png" alt="profile" />
 </details>
 
 <details>
   <summary>
    Update Profile
   </summary>
-<img src="/screenshoots/updateprofile.png" alt="updateprofile" />
+<img src="./screenshoots/page update profile.png" alt="updateprofile" />
 </details>
 
 ## Related Project
