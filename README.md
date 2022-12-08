@@ -61,7 +61,7 @@ This app was built with some technologies below:
 
 RESTful API for this web application, clone this for development Telegram.\
 
-- [Backend-Telegram](https://github.com/vickomaris/Telegram-BE)
+- [Backend-Telegram](https://github.com/rezafauzanakbar/backend-telegram)
 
 ## Contributing
 
