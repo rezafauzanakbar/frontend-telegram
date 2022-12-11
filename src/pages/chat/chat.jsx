@@ -283,7 +283,7 @@ const Chat = () => {
                     <div className="col-auto">
                       <img
                         className="image-user-chat"
-                        src={`http://localhost:3002/foto user/${item.photo}`}
+                        src={`${process.env.REACT_APP_BACKEND_URL}/foto user/${item.photo}`}
                         alt=""
                       />
                     </div>
@@ -339,7 +339,7 @@ const Chat = () => {
                 <div className="col-auto">
                   <img
                     className="image-user-chat"
-                    src={`http://localhost:3002/foto user/${activeReceiver.photo}`}
+                    src={`${process.env.REACT_APP_BACKEND_URL}/foto user/${activeReceiver.photo}`}
                     alt=""
                   />
                 </div>
@@ -471,7 +471,7 @@ const Chat = () => {
                                 >
                                   <img
                                     className="image-user-chat"
-                                    src={`http://localhost:3002/foto user/${login.photo}`}
+                                    src={`${process.env.REACT_APP_BACKEND_URL}/foto user/${login.photo}`}
                                     alt=""
                                   />
                                 </div>
@@ -531,7 +531,7 @@ const Chat = () => {
                                 <div className="col-auto">
                                   <img
                                     className="image-user-chat"
-                                    src={`http://localhost:3002/foto user/${activeReceiver.photo}`}
+                                    src={`${process.env.REACT_APP_BACKEND_URL}/foto user/${activeReceiver.photo}`}
                                     alt=""
                                   />
                                 </div>

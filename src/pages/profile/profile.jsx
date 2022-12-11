@@ -15,7 +15,7 @@ const Profile = () => {
     const data = JSON.parse(localStorage.getItem("data"));
     const id = data.id_user;
     axios
-      .get(`http://localhost:3002/user/detail/${id}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/user/detail/${id}`)
       .then((res) => {
         setProfile(res.data);
         console.log(res.data);
@@ -46,7 +46,7 @@ const Profile = () => {
               <div className="text-center mt-3">
                 <div>
                   <img
-                    src={`http://localhost:3002/foto user/${data.photo}`}
+                    src={`${process.env.REACT_APP_BACKEND_URL}/foto user/${data.photo}`}
                     alt=""
                   />
                 </div>

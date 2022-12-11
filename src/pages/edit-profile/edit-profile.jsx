@@ -28,7 +28,7 @@ const EditProfile = () => {
     const data = JSON.parse(localStorage.getItem("data"));
     const id = data.id_user;
     axios
-      .get(`http://localhost:3002/user/detail/${id}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/user/detail/${id}`)
       .then((res) => {
         setProfile(res.data);
         console.log(res.data);
@@ -45,7 +45,7 @@ const EditProfile = () => {
     let inputForm = new FormData();
     inputForm.append("photo", image);
     axios
-      .put(`http://localhost:3002/user/photo/${id}`, inputForm)
+      .put(`${process.env.REACT_APP_BACKEND_URL}/user/photo/${id}`, inputForm)
       .then((res) => {
         console.log(res.data);
         return navigate("/profile");
@@ -66,7 +66,7 @@ const EditProfile = () => {
       bio: form.bio,
     };
     axios
-      .put(`http://localhost:3002/user/${id}`, body)
+      .put(`${process.env.REACT_APP_BACKEND_URL}/user/${id}`, body)
       .then((res) => {
         console.log(res.data);
         return navigate("/profile");
@@ -97,7 +97,7 @@ const EditProfile = () => {
               <div className="text-center mt-3">
                 <label htmlFor="addImage" style={{ cursor: "pointer" }}>
                   <img
-                    src={`http://localhost:3002/foto user/${data.photo}`}
+                    src={`${process.env.REACT_APP_BACKEND_URL}/foto user/${data.photo}`}
                     alt=""
                   />
                 </label>
