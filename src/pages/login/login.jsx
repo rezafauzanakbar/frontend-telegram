@@ -14,27 +14,53 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
-    axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/login`, form)
-      .then((res) => {
-        swal({
-          title: "Login",
-          text: "Login Successfully",
-          icon: "success",
-          dangerMode: true,
-        }).then(async (confirm) => {
-          if (confirm) {
-            document.cookie = JSON.stringify(res.data.token.data);
-            localStorage.setItem("data", JSON.stringify(res.data.token.data));
-            localStorage.setItem("token", res.data.token.token);
-            return navigate("/chat");
-          }
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+    if (form.email == "" || form.password == "") {
+      swal({
+        title: "Login",
+        text: "Please Input Email and Password",
+        icon: "error",
+        dangerMode: true,
+      }).then(async (confirm) => {
+        if (confirm) {
+        }
       });
+    } else {
+      axios
+        .post(`${process.env.REACT_APP_BACKEND_URL}/login`, form)
+        .then((res) => {
+          if (res.data.status === "success") {
+            swal({
+              title: "Login",
+              text: "Login Successfully",
+              icon: "success",
+              dangerMode: true,
+            }).then(async (confirm) => {
+              if (confirm) {
+                document.cookie = JSON.stringify(res.data.token.data);
+                localStorage.setItem(
+                  "data",
+                  JSON.stringify(res.data.token.data)
+                );
+                localStorage.setItem("token", res.data.token.token);
+                return navigate("/chat");
+              }
+            });
+          } else {
+            swal({
+              title: "Login",
+              text: "Login Failed",
+              icon: "error",
+              dangerMode: true,
+            }).then(async (confirm) => {
+              if (confirm) {
+              }
+            });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   return (
@@ -59,6 +85,7 @@ const Login = () => {
                     onChange={(e) =>
                       setForm({ ...form, email: e.target.value })
                     }
+                    required
                   />
                 </div>
                 <div className="mb-3 mt-4 form-group">
@@ -70,6 +97,7 @@ const Login = () => {
                     onChange={(e) =>
                       setForm({ ...form, password: e.target.value })
                     }
+                    required
                   />
                 </div>
               </form>

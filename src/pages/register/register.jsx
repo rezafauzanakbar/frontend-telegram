@@ -25,7 +25,7 @@ const Register = () => {
       swal({
         title: "Register",
         text: "Must be input all field",
-        icon: "warning",
+        icon: "error",
         dangerMode: true,
       }).then(async (confirm) => {
         if (confirm) {
