@@ -300,14 +300,14 @@ const Chat = () => {
                         <div>
                           <h6>{item.full_name}</h6>
                         </div>
-                        {lastchat.map((data) => (
+                        {/* {lastchat.map((data) => (
                           <div
                             key={index}
                             style={{ color: "#7E98DF", marginTop: "-5px" }}
                           >
                             <span>{String(data.message).slice(0, 15)}...</span>
                           </div>
-                        ))}
+                        ))} */}
                       </button>
                     </div>
 
